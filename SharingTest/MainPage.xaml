@@ -1,13 +1,25 @@
-﻿<Page
-    x:Class="SharingTest.MainPage"
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:SharingTest"
-    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
+﻿<Page x:Class="SharingTest.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:SharingTest"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+        <StackPanel VerticalAlignment="Center"
+                    HorizontalAlignment="Center">
+            <Button x:Name="BrowserButton"
+                    Width="100"
+                    Height="30"
+                    Content="Pick File"
+                    Click="BrowseFile_OnClick" />
+            <Button x:Name="ShareButton"
+                    Width="100"
+                    Height="30"
+                    Content="Share"
+                    Click="ShareFile_OnClick"
+                    IsEnabled="False" />
+        </StackPanel>
     </Grid>
 </Page>
